@@ -11,11 +11,11 @@ const Login = ({ handleLogin }) => {
                         <div className="flex flex-col items-center gap-2 w-64">
                             <div className="mb-4 w-full">
                                 <label htmlFor="email" className="block mb-1 text-neutral-500 text-sm">Email</label>
-                                <input type="text" className="border border-neutral-300 block rounded-lg p-1 px-2 w-full" />
+                                <input type="text" className="border border-neutral-300 block rounded-lg py-1 px-3 w-full" />
                             </div>
                             <div className="w-full">
                                 <label htmlFor="password" className="block mb-1 text-neutral-500 text-sm">Password</label>
-                                <input type="text" className="border border-neutral-300 block rounded-lg p-1 w-full" />
+                                <input type="password" className="border border-neutral-300 block rounded-lg py-1 px-3 w-full" />
                             </div>
                         </div>
                         <button className="mx-auto started-button py-2 w-full text-white my-8 rounded-md cursor-pointer">Sign In</button>
