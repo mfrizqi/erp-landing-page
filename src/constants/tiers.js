@@ -13,22 +13,22 @@ const tiers = {
                 title: 'Record profits',
                 isOn: true
             },
-            // {
-            //     title: 'Analyze sales with chart',
-            //     isOn: false
-            // },
-            // {
-            //     title: '7x24 Hour Contact Support',
-            //     isOn: false
-            // },
-            // {
-            //     title: 'Export data to Excel',
-            //     isOn: false
-            // },
-            // {
-            //     title: 'AI Income Prediction',
-            //     isOn: false
-            // },
+            {
+                title: 'Analyze sales with chart',
+                isOn: false
+            },
+            {
+                title: '24/7 EIR Support',
+                isOn: false
+            },
+            {
+                title: 'Export data to Excel',
+                isOn: false
+            },
+            {
+                title: 'AI Income Prediction',
+                isOn: false
+            },
         ],
         price: 100
     },
@@ -51,17 +51,17 @@ const tiers = {
                 isOn: true
             },
             {
-                title: '7x24 Hour Contact Support',
+                title: '24/7 EIR Support',
                 isOn: true
             },
-            // {
-            //     title: 'Export data to Excel',
-            //     isOn: false
-            // },
-            // {
-            //     title: 'AI Income Prediction',
-            //     isOn: false
-            // },
+            {
+                title: 'Export data to Excel',
+                isOn: false
+            },
+            {
+                title: 'AI Income Prediction',
+                isOn: false
+            },
         ],
         price: 350
     },
@@ -84,7 +84,7 @@ const tiers = {
                 isOn: true
             },
             {
-                title: '7x24 Hour Contact Support',
+                title: '24/7 EIR Support',
                 isOn: true
             },
             {

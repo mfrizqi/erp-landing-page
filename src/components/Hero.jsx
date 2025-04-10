@@ -15,7 +15,7 @@ const Hero = () => {
           rows={9}
           columns={9}
           containerSize="50vmin"
-          lineColor="tomato"
+          lineColor="#00e5ff"
           lineWidth="0.7vmin"
           lineHeight="4.5vmin"
           baseAngle={0}

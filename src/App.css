@@ -5,3 +5,27 @@
   background: linear-gradient(143deg, rgba(161, 255, 227, 1) 0%, rgba(52, 200, 198, 1) 23%, rgba(72, 189, 255, 1) 57%, rgba(147, 134, 214, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a1ffe3", endColorstr="#9386d6", GradientType=1);
 }
+
+.tier-1 {
+    background: rgb(21, 114, 217);
+    background: -moz-linear-gradient(143deg, rgba(21, 114, 217, 1) 0%, rgba(52, 200, 181, 1) 100%);
+    background: -webkit-linear-gradient(143deg, rgba(21, 114, 217, 1) 0%, rgba(52, 200, 181, 1) 100%);
+    background: linear-gradient(143deg, rgba(21, 114, 217, 1) 0%, rgba(52, 200, 181, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1572d9", endColorstr="#34c8b5", GradientType=1);
+}
+
+.tier-2 {
+  background: rgb(21, 217, 139);
+  background: -moz-linear-gradient(143deg, rgba(21, 217, 139, 1) 0%, rgba(52, 200, 198, 1) 100%);
+  background: -webkit-linear-gradient(143deg, rgba(21, 217, 139, 1) 0%, rgba(52, 200, 198, 1) 100%);
+  background: linear-gradient(143deg, rgba(21, 217, 139, 1) 0%, rgba(52, 200, 198, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#15d98b", endColorstr="#34c8c6", GradientType=1);
+}
+
+.tier-3 {
+  background: rgb(205, 21, 217);
+  background: -moz-linear-gradient(171deg, rgba(205, 21, 217, 1) 0%, rgba(81, 52, 200, 1) 100%);
+  background: -webkit-linear-gradient(171deg, rgba(205, 21, 217, 1) 0%, rgba(81, 52, 200, 1) 100%);
+  background: linear-gradient(171deg, rgba(205, 21, 217, 1) 0%, rgba(81, 52, 200, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cd15d9", endColorstr="#5134c8", GradientType=1);
+}
