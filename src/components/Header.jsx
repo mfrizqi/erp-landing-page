@@ -6,7 +6,7 @@ import Login from "./Login";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const HeaderOption = ["Pricing", "About", "Contact"];
   const lenis = useRef(null);
 
@@ -82,12 +82,12 @@ const Header = () => {
         {isOpen && (
           <>
             <section className="block md:hidden rounded">
-              <div className="flex flex-col items-end gap-4 px-8 pt-4 pb-16 absolute top-0 left-0 bg-neutral-50 w-full z-10 rounded-b-lg">
-                <div onClick={toggleOpen} className="text-3xl">x</div>
+              <div className="flex flex-col items-center gap-4 px-8 pt-4 pb-8 absolute top-0 left-0 bg-neutral-50 w-full z-10 rounded-b-lg">
+                <div onClick={toggleOpen} className="text-3xl self-end">x</div>
                 {HeaderOption.map((item, index) => {
                   return <div key={index + 10} onClick={() => { scrollToSection(item) }}>{item}</div>;
                 })}
-                <button className="text-white px-5 py-2 started-button rounded-md" onClick={toggleLogin}>Login</button>
+                <button className="text-white px-8 py-2 started-button rounded-md" onClick={toggleLogin}>Login</button>
               </div>
             </section>
             <div className="absolute bg-black opacity-80 h-svh w-full top-0 left-0"></div>
