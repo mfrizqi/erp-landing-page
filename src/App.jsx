@@ -2,17 +2,15 @@ import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import Iridescence from "./components/Iridescence";
-import SpotlightCard from "./components/SpotlightCard";
-
-import MagnetLines from './components/MagnetLines';
+import Iridescence from "./components/addition/Iridescence";
+import SpotlightCard from "./components/addition/SpotlightCard";
+import MagnetLines from './components/addition/MagnetLines';
 
 import tiers from "./constants/tiers";
 
 const Hero = () => {
   return (
     <section className="pt-20 block lg:flex items-center gap-20">
-
       <div className="grow">
         <h1 className="text-5xl font-extrabold mb-6 text-center md:text-left mb-10 text-neutral-800">Scale Faster with Smarter Inventory <br /> & Profit Tracking</h1>
         <div className="text-xl text-center md:text-left text-neutral-400/70 mb-16">A powerful yet easy-to-use platform for entrepreneurs to manage stock, monitor daily profits, and scale with confidence all in one place.</div>
@@ -37,7 +35,7 @@ const Hero = () => {
 
 const ContactUs = () => {
   return (
-    <section className="relative rounded mb-8">
+    <section className="relative rounded mb-8" id="CONTACT">
       <div className="bg-neutral-100 p-8 mb-16">
         <h1 className="text-xl font-bold">Have questions or want to learn more about our system? We’re here to help!</h1>
 
@@ -51,19 +49,19 @@ const ContactUs = () => {
       </div>
       <div className="relative h-[440px] rounded-lg">
         <Iridescence
-          color={[1, 1, 1]}
-          mouseReact={true}
+          color={[1, 1, 2]}
           amplitude={0.1}
           speed={1.0}
         />
+        
       </div>
     </section>)
 }
 
 const AboutUs = () => {
   return (
-    <div className="flex flex-col gap-10 font-medium">
-      <div className="text-4xl font-bold mb-2 text-neutral-300/50">About Us</div>
+    <div className="flex flex-col gap-16 font-medium" id="ABOUT">
+      <div className="text-4xl font-bold text-neutral-400/50">About Us</div>
       <div className="text-2xl text-neutral-800/90">We’re a tech startup driven by one simple mission — to make business management easier for entrepreneurs. Many small and growing businesses struggle to keep track of inventory, monitor daily sales, and understand their profits. That’s where we come in.</div>
       <div className="text-2xl text-neutral-800/90">Our web-based platform functions like a lightweight ERP system, designed specifically for ease of use and efficiency. Entrepreneurs can now record every item that comes in or goes out, and keep a close eye on their daily income all from one dashboard.</div>
     </div>
@@ -71,11 +69,10 @@ const AboutUs = () => {
 }
 
 const TierList = () => {
-
   const tierList = tiers
   return (
     <>
-      <div className="text-lg mb-12">Choose a plan that fits your business needs. Whether you're just getting started or ready to scale, our flexible pricing ensures you get the right tools at the right time — no hidden fees, just smart features.</div>
+      <div className="text-lg mb-12" id="PRICING">Choose a plan that fits your business needs. Whether you're just getting started or ready to scale, our flexible pricing ensures you get the right tools at the right time — no hidden fees, just smart features.</div>
       <section className="flex flex-col lg:flex-row gap-16 md:gap-8 justify-between">
         <div className="grow">
           <SpotlightCard className="bg-neutral-50 text-black mb-6 p-8 h-full" spotlightColor="rgba(0, 229, 255, 0.7)">

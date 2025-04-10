@@ -1,21 +1,52 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import "../App.css";
+import Lenis from "lenis";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const HeaderOption = ["About", "Pricing", "Contact"];
+  const lenis = useRef(null);
+
+  useEffect(() => {
+    // Initialize Lenis
+    lenis.current = new Lenis({
+      duration: 0.6, // Control the duration of the scroll
+      easing: (t) => 1 - Math.pow(1 - t, 3), // Cubic easing for smooth stop
+      smooth: true,
+      smoothTouch: true, // Enable smooth scrolling on touch devices
+    });
+
+    const animate = (time) => {
+      lenis.current.raf(time);
+      requestAnimationFrame(animate);
+    };
+
+    requestAnimationFrame(animate);
+
+    // Cleanup on unmount
+    return () => {
+      lenis.current.destroy();
+    };
+  }, []);
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id.toUpperCase());
+    lenis.current.scrollTo(element,{
+      offset: -100
+    });
+  };
 
   function toggleOpen() {
     setIsOpen(!isOpen)
   }
 
-  const HeaderOption = ["About", "Pricing", "Contact"];
   return (
     <section className="sticky top-0 left-0 right-0 z-[20] w-full py-6 px-8 relative flex justify-between border border-b border-neutral-200 bg-white/30 backdrop-blur-sm">
       <div className="text-2xl font-bold">E I R</div>
       <div className="gap-4 items-center hidden md:flex">
         {HeaderOption.map((item, index) => {
-          return <div key={index} className="cursor-pointer hover:text-blue-400 transition-all">{item}</div>;
+          return <div key={index} className="cursor-pointer hover:text-blue-400 transition-all" onClick={()=>{scrollToSection(item)}}>{item}</div>;
         })}
         <button className="px-5 py-1 rounded cursor-pointer text-white started-button">Login</button>
       </div>
