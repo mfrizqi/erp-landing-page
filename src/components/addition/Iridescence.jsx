@@ -107,6 +107,7 @@ export default function Iridescence({
       renderer.render({ scene: mesh });
     }
     animateId = requestAnimationFrame(update);
+    gl.canvas.style.borderRadius = '16px'
     ctn.appendChild(gl.canvas);
 
     function handleMouseMove(e) {
