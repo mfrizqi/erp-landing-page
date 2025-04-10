@@ -6,7 +6,7 @@ import Login from "./Login";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const HeaderOption = ["Pricing", "About", "Contact"];
   const lenis = useRef(null);
 
