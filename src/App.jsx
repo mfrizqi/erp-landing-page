@@ -3,30 +3,24 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TiltedCard from "./components/TiltedCard";
 import Iridescence from "./components/Iridescence";
+import SpotlightCard from "./components/SpotlightCard";
+
+import tiers from "./constants/tiers";
 
 const Hero = () => {
-  return <section className="pt-20 h-svh">
+  return (
+    <section className="pt-20 h-svh">
 
-    <h1 className="text-5xl font-extrabold mb-6 text-center mb-10">Scale Faster with Smarter Inventory <br /> & Profit Tracking</h1>
-    <div>A powerful yet easy-to-use platform for entrepreneurs to manage stock, monitor daily profits, and scale with confidence — all in one place.</div>
+      <h1 className="text-5xl font-extrabold mb-6 text-center md:text-left mb-10 text-neutral-800">Scale Faster with Smarter Inventory <br /> & Profit Tracking</h1>
+      <div className="text-xl">A powerful yet easy-to-use platform for entrepreneurs to manage stock, monitor daily profits, and scale with confidence — all in one place.</div>
 
-    Call to Action Buttons:
-
-    🚀 Get Started Now
-
-    📄 See Our TIER Plans
-  </section>;
+      <button className="border border-1 border-neutral-300 rounded-lg py-3 px-4 cursor-pointer">Get Started</button>
+    </section>)
 };
 
 const ContactUs = () => {
-  return (<section className="relative p-8 rounded">
-    <div className="relative h-[440px] rounded-lg">
-      <Iridescence
-        color={[1, 1, 1]}
-        mouseReact={true}
-        amplitude={0.1}
-        speed={1.0}
-      />
+  return (
+    <section className="relative rounded">
       <div>
         Contact Us
         Have questions or want to learn more about our system? We’re here to help!
@@ -39,8 +33,15 @@ const ContactUs = () => {
 
         Let’s grow your business together!
       </div>
-    </div>
-  </section>)
+      <div className="relative h-[440px] rounded-lg">
+        <Iridescence
+          color={[1, 1, 1]}
+          mouseReact={true}
+          amplitude={0.1}
+          speed={1.0}
+        />
+      </div>
+    </section>)
 }
 
 const AboutUs = () => {
@@ -51,18 +52,78 @@ const AboutUs = () => {
       <div>Our web-based platform functions like a lightweight ERP system, designed specifically for ease of use and efficiency. Entrepreneurs can now record every item that comes in or goes out, and keep a close eye on their daily income — all from one dashboard.</div>
 
       <div>We believe that the right tools can empower business owners to make smarter decisions, save time, and focus on what really matters: growing their business. With modern features, real-time tracking, and continuous support, we’re here to simplify your workflow and help you scale with confidence.</div>
-    </div>)
+    </div>
+  )
+}
+
+const TierList = () => {
+
+  const tierList = tiers
+
+  return (
+    <section className="flex flex-col lg:flex-row gap-16 md:gap-8 justify-between">
+      <div className="grow">
+        <SpotlightCard className="bg-neutral-50 text-black mb-6 p-8" spotlightColor="rgba(0, 229, 255, 0.7)">
+          <div className="text-xl font-semibold mb-4">Tier 1</div>
+
+          <div className="flex flex-col justify-center gap-1 text-neutral-700">
+            {tiers.tier_1.list.map((item, index) => {
+              return (
+                <div key={`one_${index}`} className={!item.isOn ? 'opacity-20' : ''}>
+                  {item.title}
+                </div>)
+            })}
+          </div>
+        </SpotlightCard>
+
+        <button className="w-full rounded bg-neutral-200 py-2 cursor-pointer">Choose Plan</button>
+      </div>
+
+      <div className="grow">
+        <SpotlightCard className="bg-neutral-50 text-black mb-6 p-8" spotlightColor="rgba(0, 255, 8, 0.7)">
+          <div className="text-xl font-semibold mb-4">Tier 2</div>
+
+          <div className="flex flex-col justify-center gap-1 text-neutral-700">
+            {tiers.tier_2.list.map((item, index) => {
+              return (
+                <div key={`two_${index}`} className={!item.isOn ? 'opacity-20' : ''}>
+                  {item.title}
+                </div>)
+            })}
+          </div>
+        </SpotlightCard>
+        <button className="w-full rounded bg-neutral-200 py-2 cursor-pointer">Choose Plan</button>
+      </div>
+      <div className="grow">
+        <SpotlightCard className="bg-neutral-50 text-black mb-6 p-8" spotlightColor="rgba(0, 229, 255, 0.7)">
+          <div className="text-xl font-semibold mb-4">Tier 3</div>
+
+          <div className="flex flex-col justify-center gap-1 text-neutral-700">
+            {tiers.tier_3.list.map((item, index) => {
+              return (
+                <div key={`three_${index}`}>
+                  {item.title}
+                </div>)
+            })}
+          </div>
+        </SpotlightCard>
+
+        <button className="w-full rounded bg-neutral-200 py-2 cursor-pointer">Choose Plan</button>
+      </div>
+
+    </section>
+  )
 }
 
 function App() {
   return (
     <section className="flex flex-col items-center">
       <Header></Header>
-      <div className="px-16 flex flex-col gap-40 max-w-[700px]">
+      <div className="flex flex-col gap-40 max-w-[900px] px-8 lg:px-0">
         <Hero></Hero>
 
         <section>
-          <TiltedCard
+          {/* <TiltedCard
             imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
             altText="Kendrick Lamar - GNX Album Cover"
             captionText="Kendrick Lamar - GNX"
@@ -80,15 +141,21 @@ function App() {
                 Kendrick Lamar - GNX
               </p>
             }
-          />
+          /> */}
 
+        </section>
+
+        <section>
+          <div className="text-md mb-8">Choose a plan that fits your business needs. Whether you're just getting started or ready to scale, our flexible pricing ensures you get the right tools at the right time — no hidden fees, just smart features.</div>
+          <TierList></TierList>
         </section>
 
         <AboutUs></AboutUs>
 
+        <ContactUs></ContactUs>
+
 
       </div>
-      <ContactUs></ContactUs>
       <Footer></Footer>
     </section>
   );

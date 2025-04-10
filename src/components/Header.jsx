@@ -9,7 +9,7 @@ const Header = () => {
 
   const HeaderOption = ["About", "Pricing", "Contact"];
   return (
-    <section className="sticky top-0 left-0 right-0 w-full py-6 px-8 relative flex justify-between border border-b border-neutral-200 bg-white/30 backdrop-blur-sm">
+    <section className="sticky top-0 left-0 right-0 z-[20] w-full py-6 px-8 relative flex justify-between border border-b border-neutral-200 bg-white/30 backdrop-blur-sm">
       <div className="text-2xl font-bold">E I R</div>
       <div className="gap-4 items-center hidden md:flex">
         {HeaderOption.map((item, index) => {
