@@ -13,22 +13,22 @@ const tiers = {
                 title: 'Record profits',
                 isOn: true
             },
-            {
-                title: 'Analyze sales with chart',
-                isOn: false
-            },
-            {
-                title: '7x24 Hour Contact Support',
-                isOn: false
-            },
-            {
-                title: 'Export data to Excel',
-                isOn: false
-            },
-            {
-                title: 'AI Income Prediction',
-                isOn: false
-            },
+            // {
+            //     title: 'Analyze sales with chart',
+            //     isOn: false
+            // },
+            // {
+            //     title: '7x24 Hour Contact Support',
+            //     isOn: false
+            // },
+            // {
+            //     title: 'Export data to Excel',
+            //     isOn: false
+            // },
+            // {
+            //     title: 'AI Income Prediction',
+            //     isOn: false
+            // },
         ],
         price: 100
     },
@@ -54,14 +54,14 @@ const tiers = {
                 title: '7x24 Hour Contact Support',
                 isOn: true
             },
-            {
-                title: 'Export data to Excel',
-                isOn: false
-            },
-            {
-                title: 'AI Income Prediction',
-                isOn: false
-            },
+            // {
+            //     title: 'Export data to Excel',
+            //     isOn: false
+            // },
+            // {
+            //     title: 'AI Income Prediction',
+            //     isOn: false
+            // },
         ],
         price: 350
     },
