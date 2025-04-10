@@ -9,8 +9,8 @@ const Header = () => {
 
   const HeaderOption = ["About", "Pricing", "Contact"];
   return (
-    <section className="fixed top-0 left-0 right-0 w-full py-6 px-8 relative flex justify-between">
-      <div>Logo</div>
+    <section className="sticky top-0 left-0 right-0 w-full py-6 px-8 relative flex justify-between border border-b border-neutral-200 bg-white/30 backdrop-blur-sm">
+      <div className="text-2xl font-bold">E I R</div>
       <div className="gap-4 items-center hidden md:flex">
         {HeaderOption.map((item, index) => {
           return <div key={index}>{item}</div>;

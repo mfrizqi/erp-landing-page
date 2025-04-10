@@ -1,9 +1,7 @@
 const Footer = () => {
-  const HeaderOption = ["About", "Pricing", "Contact"];
   return (
-    <section className="fixed top-0 left-0 right-0 w-full flex justify-between">
-      <div>Logo</div>
-      <div></div>
+    <section className="bg-neutral-100 px-8 py-3 w-full">
+      <div className="text-xl font-medium text-neutral-600">E I R</div>
     </section>
   );
 };

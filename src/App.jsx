@@ -1,11 +1,13 @@
 import "./App.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import TiltedCard from "./components/TiltedCard";
+import Iridescence from "./components/Iridescence";
 
 const Hero = () => {
-  return <section className="pt-8 h-svh">
+  return <section className="pt-20 h-svh">
 
-    <h1 className="text-2xl font-extrabold mb-6">Scale Faster with Smarter Inventory & Profit Tracking</h1>
+    <h1 className="text-5xl font-extrabold mb-6 text-center mb-10">Scale Faster with Smarter Inventory <br /> & Profit Tracking</h1>
     <div>A powerful yet easy-to-use platform for entrepreneurs to manage stock, monitor daily profits, and scale with confidence — all in one place.</div>
 
     Call to Action Buttons:
@@ -17,25 +19,46 @@ const Hero = () => {
 };
 
 const ContactUs = () => {
-  return <div>
-    Contact Us
-    Have questions or want to learn more about our system? We’re here to help!
+  return (<section className="relative p-8 rounded">
+    <div className="relative h-[440px] rounded-lg">
+      <Iridescence
+        color={[1, 1, 1]}
+        mouseReact={true}
+        amplitude={0.1}
+        speed={1.0}
+      />
+      <div>
+        Contact Us
+        Have questions or want to learn more about our system? We’re here to help!
 
-    📧 Email: support@yourstartup.com
-    📞 Phone: +62 812 3456 7890
-    📍 Address: Jl. Startup No. 123, Jakarta, Indonesia
+        📧 Email: support@yourstartup.com
+        📞 Phone: +62 812 3456 7890
+        📍 Address: Jl. Startup No. 123, Jakarta, Indonesia
 
-    Or simply fill out the contact form on our website — our team is ready to assist you 24/7.
+        Or simply fill out the contact form on our website — our team is ready to assist you 24/7.
 
-    Let’s grow your business together!
-  </div>
+        Let’s grow your business together!
+      </div>
+    </div>
+  </section>)
+}
+
+const AboutUs = () => {
+  return (
+    <div className="flex flex-col gap-10">
+      <div>We’re a tech startup driven by one simple mission — to make business management easier for entrepreneurs. Many small and growing businesses struggle to keep track of inventory, monitor daily sales, and understand their profits. That’s where we come in.</div>
+
+      <div>Our web-based platform functions like a lightweight ERP system, designed specifically for ease of use and efficiency. Entrepreneurs can now record every item that comes in or goes out, and keep a close eye on their daily income — all from one dashboard.</div>
+
+      <div>We believe that the right tools can empower business owners to make smarter decisions, save time, and focus on what really matters: growing their business. With modern features, real-time tracking, and continuous support, we’re here to simplify your workflow and help you scale with confidence.</div>
+    </div>)
 }
 
 function App() {
   return (
-    <section>
+    <section className="flex flex-col items-center">
       <Header></Header>
-      <div className="px-16 flex flex-col gap-40">
+      <div className="px-16 flex flex-col gap-40 max-w-[700px]">
         <Hero></Hero>
 
         <section>
@@ -61,19 +84,12 @@ function App() {
 
         </section>
 
-        <section>
-          About Us <br /><br />
-          We're a startup focused on simplifying business operations for entrepreneurs through a user-friendly ERP-style platform. Our web-based solution helps users easily track every item that goes in and out, while also recording daily profits in real-time. <br /><br />
-
-          To suit different business needs, we offer a flexible TIER System. Users can subscribe based on their required features — from basic inventory tracking to detailed sales analytics and AI-powered income forecasting. <br /><br />
-
-          Whether you're just starting out or managing a growing business, our system is designed to support you with clarity, efficiency, and scalability.
+        <AboutUs></AboutUs>
 
 
-        </section>
-
-          <ContactUs></ContactUs>
       </div>
+      <ContactUs></ContactUs>
+      <Footer></Footer>
     </section>
   );
 }
